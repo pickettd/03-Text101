@@ -90,7 +90,7 @@ public class TextController : MonoBehaviour {
 					"The guard tips his hat at you as you waltz past, claiming " +
 					"your freedom. You heart races as you walk into the sunset.\n\n" +
 					"Press P to Play again." ;
-		if (Input.GetKeyDown(KeyCode.P)) 		{myState = States.cell;}
+		//if (Input.GetKeyDown(KeyCode.P)) 		{myState = States.cell;}
 	}	
 	
 	void stairs_0 () {
