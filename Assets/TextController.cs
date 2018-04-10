@@ -138,13 +138,17 @@ public class TextController : MonoBehaviour {
 					"some dirty sheets on the bed, a mark where the mirror was, " +
 					"and that pesky door is still there, and firmly locked!\n\n" +
 					"Press S to view Sheets, or L to view Lock" ;
-		if 		(Input.GetKeyDown(KeyCode.S)) 	{myState = States.sheets_1;}
+		if 		(Input.GetKeyDown(KeyCode.S)) 	{myState = States.sheets_0;}
 		else if (Input.GetKeyDown(KeyCode.L)) 	{myState = States.lock_1;}
     }
    
     void sheets_0 () {
 		text.text = "You can't believe you sleep in these things. Surely it's " +
-					"time somebody changed them. The pleasures of prison life " +
+					"time somebody changed them. The pleasures of prison life. " +
+					"As you look at the sheets you realize that they are actually " +
+					"designer brand, and very high thread count. How strange. " +
+					"Are they a donation to the prison? Is it supposed to make it better? " +
+					"The warden must have a good discount for high quality linens " +
 					"I guess!\n\n" +
 					"Press R to Return to roaming your cell" ;
         if (Input.GetKeyDown(KeyCode.R)) 		{myState = States.cell;}
