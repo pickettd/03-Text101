@@ -5,6 +5,7 @@ using System.Collections;
 public class TextController : MonoBehaviour {
 
     public Text text;
+    public GameObject prisonImage;
     
 	private enum States {
 		cell, mirror, sheets_0, lock_0, cell_mirror, sheets_1, lock_1, corridor_0, stairs_0, stairs_1,
@@ -117,6 +118,7 @@ public class TextController : MonoBehaviour {
 	}
 	
 	void cell () {
+		prisonImage.SetActive(false);
 		text.text = "You are in a prison cell, and you want to escape. There are " +
 					"some dirty sheets on the bed, a mirror on the wall, and the door " +
 					"is locked from the outside.\n\n" +
@@ -127,6 +129,7 @@ public class TextController : MonoBehaviour {
     }
     
 	void mirror() {
+		prisonImage.SetActive(true);
 		text.text = "The dirty old mirror on the wall seems loose.\n\n" +
 					"Press T to Take the mirror, or R to Return to cell" ;
 		if 		(Input.GetKeyDown(KeyCode.T)) 	{myState = States.cell_mirror;}
@@ -134,6 +137,7 @@ public class TextController : MonoBehaviour {
     }
     
 	void cell_mirror() {
+		prisonImage.SetActive(true);
 		text.text = "You are still in your cell, and you STILL want to escape! There are " +
 					"some dirty sheets on the bed, a mark where the mirror was, " +
 					"and that pesky door is still there, and firmly locked!\n\n" +
