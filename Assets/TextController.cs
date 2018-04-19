@@ -64,8 +64,8 @@ public class TextController : MonoBehaviour {
 	}
 	
 	void corridor_2() {
-		text.text = "Back in the corridor, having declined to dress-up as a cleaner.\n\n" +
-					"Press C to revisit the Closet, and S to climb the stairs";
+		text.text = "Back in the c\norridor, h\naving declined to dr\ness-up as a cleaner.\n\n" +
+					"Press C to revi\nsit the Cl\noset, and S to climb the stairs";
 		if 		(Input.GetKeyDown(KeyCode.C)) 	{myState = States.in_closet;}
 		else if (Input.GetKeyDown(KeyCode.S)) 	{myState = States.stairs_2;}
 	}
@@ -98,7 +98,7 @@ public class TextController : MonoBehaviour {
 		text.text = "You start walking up the stairs towards the outside light. " +
 					"You realise it's not break time, and you'll be caught immediately. " +
 					"You slither back down the stairs and reconsider.\n\n" +
-					"Press R to Return to the corridor." ;
+					"Press R to Return to the corridor. Press 🙂 to smile" ;
 		if (Input.GetKeyDown(KeyCode.R)) 		{myState = States.corridor_0;}
 	}
 	
