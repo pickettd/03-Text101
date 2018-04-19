@@ -41,7 +41,7 @@ public class TextController : MonoBehaviour {
 	}
 	
 	void in_closet() {
-		text.text = "Inside the closet you see a cleaner's uniform that looks about your size! " +
+		text.text = "Inside the closet you see a cle(╯°□°）╯︵ ┻━┻)aner's uniform that looks about your size! " +
 					"Seems like your day is looking-up.\n\n" +
 					"Press D to Dress up, or R to Return to the corridor";
 		if 		(Input.GetKeyDown(KeyCode.R)) 	{myState = States.corridor_2;}
@@ -52,7 +52,7 @@ public class TextController : MonoBehaviour {
 		text.text = "You are looking at a closet door, unfortunately it's locked. " +
 					"Maybe you could find something around to help enourage it open?\n\n" +
 					"Press R to Return to the corridor";
-		if (Input.GetKeyDown(KeyCode.R)) 		{myState = States.corridor_0;}
+		if (Input.GetKeyDown(KeyCode.R)) 		{myState = States.cell;}
 	}
 	
 	void corridor_3() {
